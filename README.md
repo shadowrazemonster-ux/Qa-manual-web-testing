@@ -129,17 +129,18 @@ Status: PASSED ✅
 
 5. Bug Reports
 
-BUG_001: Missing Email Format Validation
+BUG_001: Missing Domain Validation in Contact Us Form
 Severity: Medium
-Priority: High
+Priority: Medium
 
 Steps to Reproduce:
 1. Navigate to 'Contact Us' page.
-2. Fill in all fields, but enter 'invalid_email' (no @ or domain) in the Email field.
-3. Click 'Submit'.
+2. Fill in Name, Subject, and Message fields.
+3. Enter an incomplete email address: test@test (missing top-level domain like .com or .net).
+4. Click 'Submit' and then click 'OK' on the browser confirmation popup.
 
-Actual Result: Form is submitted successfully, and a "Success" message is displayed.
-Expected Result: The system should reject the form and display an error message: "Please enter a valid email address".
+Actual Result: The system accepts the invalid email format and submits the form successfully.
+Expected Result: The system should validate the email format completely and display an error message if the domain suffix is missing.
 
 6. Test Summary
 
