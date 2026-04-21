@@ -150,3 +150,22 @@ Expected Result: The system should validate the email format completely and disp
 
 Execution Date: April 19, 2026
 Conclusion: The main functionality (Registration, Cart, Search, Categories) is working correctly. However, the Contact Us form lacks proper email validation, which needs to be fixed.
+---
+BUG_002: Negative Product Quantity Leads to Negative Total Price
+Severity: Critical 🚨
+Priority: Highest
+
+Description: The shopping cart allows entering a negative quantity for products, which results in a negative total order price. This could lead to massive financial losses and order logic bypass.
+
+Steps to Reproduce:
+1. Navigate to any product detail page.
+2. In the 'Quantity' input field, enter a negative number (e.g., `-5`).
+3. Click 'Add to cart'.
+4. Click 'View Cart' in the popup.
+
+Actual Result: Product is added with quantity -5, and the total price becomes negative (e.g., Rs. -5000).
+Expected Result: System should prevent adding products with quantity less than 1. An error message should appear.
+
+Attachment:
+[View Bug Screenshot](./image_5.png) 
+*(Note: Ensure you uploaded the screenshot to your repository with the same name)*
