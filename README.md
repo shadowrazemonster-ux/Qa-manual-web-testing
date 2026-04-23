@@ -125,7 +125,6 @@ Expected Result: User is redirected to the 'Login' page, and the session is clos
 Actual Result: Redirected to login page. Access to account restricted.
 Status: PASSED ✅
 
----
 
 5. Bug Reports
 
@@ -146,7 +145,7 @@ Expected Result: The system should validate the email format completely and disp
 
 | Total Test Cases | Passed | Failed | Bugs Found |
 | :--- | :--- | :--- | :--- |
-| 11 (TC_011 - TC_021) | 10 | 1 | 1 |
+| 11 (TC_011 - TC_021) | 10 | 2 | 2|
 
 Execution Date: April 19, 2026
 Conclusion: The main functionality (Registration, Cart, Search, Categories) is working correctly. However, the Contact Us form lacks proper email validation, which needs to be fixed.
